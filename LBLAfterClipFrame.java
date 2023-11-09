@@ -12,6 +12,18 @@ public class LBLAfterClipFrame extends JFrame{
         newFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         newFrame.setVisible(true);
 
+        JButton HomeButton = new JButton("Home");
+        HomeButton.setBounds(400, 500, 150, 30); // Set the button's position and size
+        newFrame.add(HomeButton);
+
+        HomeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               HomeFrame hf = new HomeFrame();
+               newFrame.dispose();
+            }
+        });
+
         JPanel panel = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
